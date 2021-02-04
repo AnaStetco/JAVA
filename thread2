@@ -1,0 +1,373 @@
+import java.lang.Thread;
+import java.lang.Exception;
+
+class thread2 extends Thread
+{
+ public void run()
+  {
+  
+   try
+   {
+
+     int j;
+    
+     for(j=1;j<=50;j++)
+     {
+       System.out.println(" VAL OF j of  second THREAD " + j);
+
+      }
+   }
+
+   catch(Exception e)//e is the object of exception class
+    {
+
+     System.out.println(" some exception in running thread  :"    );
+    }
+
+
+  }
+}
+class thread1 extends Thread
+{
+  
+ public void run()
+  {
+  
+
+   try
+   {
+
+     int i;
+    
+     for(i=1;i<=25;i++)
+     {
+       System.out.println(" VAL OF I FIRST THREAD " + i);
+       if(i==20)
+         {
+            sleep(10000);
+
+         }
+	
+      }
+   }
+
+   catch(Exception e)//e is the object of exception class
+    {
+
+     System.out.println(" some exception in running thread  :"    );
+
+
+    }
+
+
+  }
+
+}
+class ana128
+  {
+    public static void main(String args[])
+   {
+
+      thread1 a1=new thread1();
+      thread2 a2=new thread2();
+      a1.start();
+      a2.start();
+      // before try block both threads are ready to run
+      try{
+      System.out.println(" JUST BEFORE THREAD a2 GOES FOR SLEEPING");
+      //a2.sleep(5000);// when exactly this statement executes
+      //System.out.println(" JUST AFTER EXECUTING SLEEP COMMAND FOR a2");
+
+         }
+     catch(Exception e)
+       {
+
+        System.out.println(" some exception occured");
+      }
+
+
+
+    }
+  }
+
+// sleep(100);
+// and sleep() is always called under a try block
+
+------------------------------------------------------------------------
+---------------------------------------------------------------------
+import java.lang.Thread;
+import java.lang.Exception;
+
+class thread2 extends Thread
+{
+ public void run()
+  {
+  
+   try
+   {
+
+     int j;
+    
+     for(j=1;j<=50;j++)
+     {
+       System.out.println(" VAL OF j of  second THREAD " + j);
+
+      }
+   }
+
+   catch(Exception e)//e is the object of exception class
+    {
+
+     System.out.println(" some exception in running thread  :"    );
+    }
+
+
+  }
+}
+class thread1 extends Thread
+{
+  
+ public void run()
+  {
+  
+
+   try
+   {
+
+     int i;
+    
+     for(i=1;i<=25;i++)
+     {
+       System.out.println(" VAL OF I FIRST THREAD " + i);
+       if(i==20)
+         {
+            stop();//dead of running thread
+
+         }
+	
+      }
+   }
+
+   catch(Exception e)//e is the object of exception class
+    {
+
+     System.out.println(" some exception in running thread  :"    );
+
+
+    }
+// HOW TO COMPILE PROGRAM WITH DEPRICATION
+// javac -Xlint ana128.java
+// it might give you some warnings , these warnings can be ignored
+// run the program as usual
+
+  }
+
+}
+class ana128
+  {
+    public static void main(String args[])
+   {
+
+      thread1 a1=new thread1();
+      thread2 a2=new thread2();
+      a1.start();
+      a2.start();
+      // before try block both threads are ready to run
+      try{
+      System.out.println(" JUST BEFORE THREAD a2 GOES FOR SLEEPING");
+      //a2.sleep(5000);// when exactly this statement executes
+      //System.out.println(" JUST AFTER EXECUTING SLEEP COMMAND FOR a2");
+
+         }
+     catch(Exception e)
+       {
+
+        System.out.println(" some exception occured");
+      }
+
+
+
+    }
+  }
+
+// sleep(100);
+// and sleep() is always called under a try block
+------------------------------------------------------------
+---------------------------------------------------------------
+import java.lang.Thread;
+import java.lang.Exception;
+
+class thread2 extends Thread
+{
+ public void run()
+  {
+  
+   try
+   {
+
+     int j;
+    
+     for(j=1;j<=10;j++)
+     {
+       System.out.println(" VAL OF j of  second THREAD " + j);
+      if(j==5)
+       {//stop();
+        }
+
+      }
+   }
+
+   catch(Exception e)//e is the object of exception class
+    {
+
+     System.out.println(" some exception in running thread  :"    );
+    }
+
+
+  }
+}
+class thread1 extends Thread
+{
+  
+ public void run()
+  {
+  
+
+   try
+   {
+
+     int i;
+    
+     for(i=1;i<=25;i++)
+     {
+       System.out.println(" VAL OF I FIRST THREAD " + i);
+       if(i==5)
+         {
+            yield();//dead of running thread
+
+         }
+	
+      }
+   }
+
+   catch(Exception e)//e is the object of exception class
+    {
+
+     System.out.println(" some exception in running thread  :"    );
+
+
+    }
+// HOW TO COMPILE PROGRAM WITH DEPRICATION
+// javac -Xlint ana128.java
+// it might give you some warnings , these warnings can be ignored
+// run the program as usual
+
+  }
+
+}
+//--------------------------------
+class thread3 extends Thread
+{
+ public void run()
+  {
+  
+   try
+   {
+
+     int k;
+    
+     for(k=1;k<=10;k++)
+     {
+       System.out.println(" VAL OF K of  second THREAD " + k);
+      if(k==5)
+       {//stop();
+        }
+
+      }
+   }
+
+   catch(Exception e)//e is the object of exception class
+    {
+
+     System.out.println(" some exception in running thread  :"    );
+    }
+
+
+  }
+}
+
+//-----------------
+
+class thread4 extends Thread
+{
+ public void run()
+  {
+  
+   try
+   {
+
+     int l;
+    
+     for(l=1;l<=10;l++)
+     {
+       System.out.println(" VAL OF l of  second THREAD " + l);
+      if(l==5)
+       {//stop();
+        }
+
+      }
+   }
+
+   catch(Exception e)//e is the object of exception class
+    {
+
+     System.out.println(" some exception in running thread  :"    );
+    }
+
+
+  }
+}
+
+
+class ana128
+  {
+    public static void main(String args[])
+   {
+
+      thread1 a1=new thread1();
+      thread2 a2=new thread2();
+      thread3 a3=new thread3();
+      thread4 a4 = new thread4();
+ 
+      a1.start();
+      a2.start();
+      a3.start();
+      a4.start();  
+      a2.setPriority(Thread.MAX_PRIORITY);
+      a3.setPriority(Thread.NORM_PRIORITY);    
+      // before try block both threads are ready to run
+      try{
+      System.out.println(" JUST BEFORE THREAD a2 GOES FOR SLEEPING");
+      //a2.sleep(5000);// when exactly this statement executes
+      //System.out.println(" JUST AFTER EXECUTING SLEEP COMMAND FOR a2");
+       //a2.stop();
+       //a1.stop();
+      
+
+         }
+     catch(Exception e)
+       {
+
+        System.out.println(" some exception occured");
+      }
+
+
+
+    }
+  }
+
+// sleep(100);
+// and sleep() is always called under a try block
+// yield() => it brings a running thread at the last of 
+
+
