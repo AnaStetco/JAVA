@@ -1,0 +1,31 @@
+class ana16
+{
+ static int x;
+ static int y;
+ void getval()
+  {
+    x=10;
+    y=12;
+
+  }
+  void show()
+  {
+  System.out.println(" this is the value of x :" +x);
+  System.out.println(" this is the val of y :" +y); 
+
+  }
+ }
+
+class statdemo
+ {  
+  public static void main(String args[])
+   {
+  
+     ana16 ob1 = new ana16();
+     ob1.show();
+     ana16 ob2= new ana16();
+     ob2.show();
+     
+  }
+
+ } 
