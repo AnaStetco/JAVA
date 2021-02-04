@@ -1,0 +1,63 @@
+import java.lang.Thread;
+// Thread is a class under lang package 
+// lang package is under java package
+// so we have to extend Thread class and override its run() function
+
+class t1 extends Thread
+
+{
+
+public void run()
+{
+System.out.println("STARTING THREAD 1 ");
+  int i;
+  for(i=1;i<=5;i++)
+    {
+    System.out.println("this is value of I : "+i);
+    }
+  System.out.println("EXITING FROM RUN");
+ }//end of run
+ }
+class t2 extends Thread
+  {
+   public void run()
+   {
+    System.out.println("starting thread 2");
+    int j;
+    for(j=1;j<=5;j++)
+    {
+      System.out.println("this is value of j: "+j);
+     }
+   
+   }
+}
+class t3 extends Thread
+  {
+  public void run()
+  {
+    System.out.println("here starts thread 3");
+   int k;
+    for(k=1;k<=5;k++)
+    {
+     System.out.println("this is value of k: "+k);
+    }
+  }
+}
+
+
+class ana200
+{
+ public static void main(String args[])
+ {
+  t1 obj1=new t1();// you are creating a NEW BORN THREAD
+  t2 obj2=new t2();
+  t3 obj3=new t3();
+  //obj1.start();
+  //obj2.start();
+  //obj3.start();
+  obj1.run();
+  obj2.run();
+  obj3.run(); // IT COMES UNDER RUNNABLE
+//obj1.run();// non thread behaviour
+ }
+}
