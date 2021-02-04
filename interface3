@@ -1,0 +1,52 @@
+interface area
+{
+
+public double calc(double l, double b);
+}
+
+//--------------------------------
+
+class triangle implements area
+{
+
+public double calc(double l1, double b1)
+ {
+  double art;
+  
+  art = (1.0/2.0)* l1*b1;
+  return art;
+ }
+
+}
+
+//-------------------------------------
+class rectangle implements area
+{
+public double calc(double l2,double b2)
+{
+double car;
+car=l2*b2;
+return car;
+
+}
+}
+class ana86
+{
+public static void main(String args[])
+{
+triangle obj1=new triangle();
+area a;
+a=obj1;// a is poininting towards obj1
+double vipin;
+vipin=a.calc(7,9);
+System.out.println("this is calc of area: "+vipin);
+
+
+rectangle obj2=new rectangle();
+area b;
+b=obj2;
+double ana;
+ana=b.calc(10,5);
+System.out.println("this is calc function of rectangle: "+ana);
+}
+}
