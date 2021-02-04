@@ -1,0 +1,33 @@
+import java.util.Scanner;
+class doubleA
+  {
+   public static void main(String args[])
+  {
+Scanner obj=new Scanner(System.in);
+   int i,j;
+int a1[][]=new int[3][4];
+for(i=0;i<3;i++)
+  {
+for(j=0;j<4;j++)
+  {
+   a1[i][j]=obj.nextInt();
+   }
+ }
+int s;
+for(i=0;i<3;i++)
+{
+s=0;
+
+for(j=0;j<4;j++)
+
+{
+//System.out.print(" "+a1[i][j]);
+  s=s+ a1[i][j];
+  }
+System.out.println("sum of row : "+s);
+//System.out.print("");
+  }
+
+
+   }
+  }
