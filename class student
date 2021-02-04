@@ -1,0 +1,33 @@
+class student
+{
+  int rollid;
+  double math;
+  double phy;
+  double chem;
+  void getval()
+   {   
+        rollid=8;
+        math = 99;
+        phy = 89;
+        chem =88;
+ 
+   }
+  void average()
+    {
+      double avg;
+      double sum;
+      sum =phy+chem+math;
+      avg= sum/3.0;
+      System.out.println(" result is : "+avg); 
+      //return avg;
+      }
+   void show()
+    {
+    System.out.println("this is roll id  :"+rollid);
+    System.out.println("this is roll math  :"+math);
+    System.out.println("this is roll physics  :"+phy);
+    System.out.println("this is roll chem  :"+chem);
+    }
+     
+}
+
