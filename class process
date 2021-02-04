@@ -1,0 +1,16 @@
+class process
+{
+  public static void main(String args[])
+   {
+     student ana = new student();
+     double result;
+    // new is a request to allocat memory to ana
+    // student()   is a constructor function
+    ana.getval();
+    result= ana.average();
+    System.out.println("average of student ana is : "+result);
+    ana.show();
+    
+    
+    }
+}
