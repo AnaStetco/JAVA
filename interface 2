@@ -1,0 +1,39 @@
+interface i1
+{
+ public void display1();
+ 
+}
+
+interface i2
+{
+public void display2();
+}
+
+interface k  extends i1,i2
+{
+
+}
+
+class d implements k
+{
+public void display1()
+{
+System.out.println("this is display1 function");
+
+}
+public void display2()
+{
+System.out.println("this is display2 function");
+}
+}
+class ana87
+{
+public static void main(String args[])
+{
+d obj1=new d();
+k r;
+r=obj1;
+r.display1();
+r.display2();
+}
+}
