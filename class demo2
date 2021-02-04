@@ -1,0 +1,43 @@
+import java.util.Scanner;
+class demo2
+  {
+static int ana()
+{
+System.out.println("my first program alone");
+int i,sum1;
+sum1=0;
+for(i=0;i<10;i++)
+  {
+   sum1=sum1+i;
+
+}
+
+return sum1;
+}
+static int andrei()
+{
+Scanner sc=new Scanner(System.in);  
+System.out.print("Enter the number of elements you want to store: ");  
+int i,sum2,n;
+sum2=0;
+for(i=0;i<5;i++)
+  {
+  n=sc.nextInt();
+   sum2=sum2+i;
+   }
+return sum2;
+}
+public static void main(String args[])
+  {
+
+
+int car1,car2;
+car1=ana();
+car2=andrei();
+System.out.println("this is the sum1: "+car1);
+System.out.println("this is the sum2: "+car2);
+//System.out.println("ana banana");
+   
+}
+
+  }
