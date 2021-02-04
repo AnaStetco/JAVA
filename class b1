@@ -1,0 +1,49 @@
+class b1
+{
+int a,b;
+void getab()
+{
+a=6;
+b=10;
+
+}
+final void compute()
+ {
+  int s;
+  s= a+b; 
+  System.out.println("this is the function in class b1 SUM val of s :"+s);
+ }
+void display()
+{
+
+System.out.println("this is the function in class b1");
+System.out.println("val of a: "+a+"  val of b :"+b);
+
+}
+
+}
+class d1 extends b1
+{
+
+void compute1()
+ {
+  int s;
+  s= a*b; 
+  System.out.println("this is the function in class d1 PRODUCT val of s :"+s);
+
+  }
+}
+class anacompute
+{
+public static void main(String args[])
+  {
+d1 obj=new d1();
+obj.getab();
+obj.compute1();
+obj.display();
+
+
+}
+
+}
+
