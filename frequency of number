@@ -1,0 +1,36 @@
+
+// this program will find the frequency of a given no.
+
+import java.util.Scanner;
+public class frequency
+  {
+   public static void main(String args[])
+   {
+int count,i,no;
+count=0;
+int a[]=new int[15];
+Scanner obj=new Scanner(System.in);
+System.out.println("enter no whos frequency you want to see");
+no=obj.nextInt();
+
+// this is input loop
+for(i=0;i<15;i++)
+
+  {
+  System.out.println("this is the array,enter value now");
+  a[i]= obj.nextInt();// this is not creation of 
+
+  }
+for(i=0;i<15;i++)
+  {
+if(a[i]==no)
+{
+count=count+1;
+}
+
+
+   }
+System.out.println("this is the count of numbers in the array: "+count);
+
+  }
+  }
