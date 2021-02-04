@@ -1,0 +1,26 @@
+import java.lang.Exception;
+public class ana116
+{
+
+public static void main(String args[])
+
+{
+
+// for demonstration of array store exception
+try
+{
+Object ar[] = new Double[10];
+
+ar[4] = 45;
+
+}
+catch(ArrayStoreException e)
+{
+
+System.out.println("Attempt to store  wrong value in integer array   :" + e); 
+
+}
+
+}
+
+}
