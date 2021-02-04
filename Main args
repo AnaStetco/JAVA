@@ -1,0 +1,13 @@
+class mainar
+ {
+   public static void main(String args[])
+    {
+      System.out.println("ok");
+
+     System.out.println(" first string : " +  args[0]);
+     System.out.println("second string: " + args[1]);
+     System.out.println(" 3th string : " + args[2]);
+     System.out.println(" 4th string : " + args[3]);
+
+    }
+ }
