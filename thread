@@ -1,0 +1,88 @@
+class thread23 extends Thread
+   {
+        static final double ar,rad,pi;
+       double r,area;
+       
+        boolean negative=true; 
+        
+          
+    public void run()
+     {
+          
+      for (int i = 3; i < 100000; i += 2)
+      {
+           if (negative)
+               pi -= (1.0 / i);
+           else
+               pi += (1.0 / i);
+           negative = !negative;
+           
+      System.out.println ("Finished calculating PI");
+          Scanner obj1=new Scanner(System.in);
+          System.out.println("please enter the radius");
+          r=obj1.nextDouble();
+          System.out.println("this is the radius: "+r);
+          //System.out.println("please enter the value of pi");
+          //pi=obj1.nextDouble();
+          //System.out.println("this is pi: "+pi);
+          System.out.println("this is calculation of area");
+         // area=r*r*pi;// area initialized here
+          //System.out.println("this is the area of the circle: "+area);
+          
+      
+        }
+       
+    }    
+  }
+   class thread24 extends Thread
+      {
+       public void run()
+       {
+        double pa,tiy,roi,simint;
+      try
+        {
+       Scanner obj2=new Scanner(System.in);
+       System.out.println("please enter priniciple amount");
+       pa=obj2.nextDouble();
+       System.out.println("please enter time in years ");
+       tiy=obj2.nextDouble();
+       System.out.println("please enter rate of interest");
+       roi=obj2.nextDouble();
+       simint= (pa*tiy*roi)/100;
+       System.out.println("this is simple rate of interest: "+simint);                                  
+      }
+      catch(Exception e)
+      {
+      System.out.println("if exception occurs");
+     }
+    }
+  }
+   class ana137
+    {
+     public static void main(String args[])
+    {
+
+     thread24 vipin=new thread24();
+     thread23 ana=new thread23();
+     vipin.start(); 
+     ana.start();
+      double area,pi,rad;
+      pi=3.14;
+      rad=14;
+      area=rad*rad*pi;
+      
+     try
+      { 
+      thread23.sleep(1000);
+      }
+      catch(InterruptedException e)
+       {
+       }
+       System.out.println("pi is: "+ana.ar);
+         }
+
+       }
+     
+
+
+ 
