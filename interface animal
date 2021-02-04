@@ -1,0 +1,52 @@
+
+
+interface animal
+   {
+public void bark();
+public void sleep();
+
+}
+class dog implements animal
+  {
+   public void bark()
+   {
+     System.out.println("woof woof");
+
+   }
+public void sleep()
+   {
+    System.out.println("zzzzzz");
+
+   }
+  }
+class cat implements animal
+   {
+public void bark()
+  {
+System.out.println("dog is not barking");
+}
+public void sleep()
+  {
+System.out.println("cat is sleeping");
+}
+   }
+class sound
+  {
+public static void main(String args[])
+  {
+dog myobj=new dog();
+cat obj3=new cat();
+animal refanimal;
+refanimal = myobj; // this is pointing twards the object of the class that is
+                   // implementing that interface
+
+refanimal.bark();
+refanimal.sleep();
+refanimal = obj3;
+refanimal.bark();
+refanimal.sleep();
+//myobj.bark();
+//myobj.sleep();
+}
+}
+
