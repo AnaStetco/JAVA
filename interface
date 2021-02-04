@@ -1,0 +1,78 @@
+interface i
+{
+String libname="wey";
+String location="weybridge";
+//public void display();
+
+}
+interface bookinfo extends i
+{
+   public void book_details();
+   public int reciptbook();
+   public int issuebook();
+
+}
+
+class book implements bookinfo
+{
+
+ String bname;
+ String aname;
+ String publication;
+ int bookid;
+ int booknos;
+
+
+ public void book_details()
+  {
+ 
+  bname="programming with java";
+  aname=" e bala";
+  publication ="mcgraw";
+  bookid=12;
+  booknos=10;   
+
+
+ }
+ public int reciptbook()
+ {
+  int n;
+  n=5;
+  booknos=booknos+n;
+  return booknos;
+ }
+ public int issuebook()
+ {
+  int q;
+  q=3;
+  booknos=booknos-q;
+  return booknos;
+ }
+public void display()
+ {
+ System.out.println("this is the book name: "+bname);
+ System.out.println("this is the book aname: "+aname);
+ System.out.println("this is the book publication: "+publication);
+ System.out.println("this is the book bookid: "+bookid);
+ System.out.println("this is the book name: "+booknos);
+ System.out.println("this is the library name: "+libname);
+ System.out.println("this is thelibrary location: "+location);
+ }
+}
+class a88
+{
+public static void main(String args[])
+{
+book obj1=new book();
+bookinfo r;
+r=obj1;
+r.book_details();
+int car1,car2;
+car1=r.reciptbook();
+System.out.println("this is the recipt of the book: "+car1);
+car2=r.issuebook();
+System.out.println("this is the issue of the book: "+car2);
+obj1.display();
+
+}
+}
