@@ -1,0 +1,74 @@
+import java.lang.Thread;
+import java.lang.Exception;
+import java.util.Scanner;
+
+class thread23 extends Thread
+   {
+//Change
+double area;
+    public void run()
+     {
+        double r,pi;
+	try
+        {
+          Scanner obj1=new Scanner(System.in);
+          System.out.println("please enter the radius");
+          r=obj1.nextDouble();
+          System.out.println("this is the radius: "+r);
+          System.out.println("please enter the value of pi");
+          pi=obj1.nextDouble();
+          System.out.println("this is pi: "+pi);
+   
+          // Change
+          this.area=r*r*pi; 
+       }
+     
+   
+    catch(Exception e)
+     {
+     System.out.println("if some exception occurs");
+     }
+    }
+//Change
+   double getArea() {
+ return this.area;
+}
+  }
+   class thread24 extends Thread
+      {
+       public void run()
+       {
+        double pa,tiy,roi,simint;
+      try
+        {
+       Scanner obj2=new Scanner(System.in);
+       System.out.println("please enter priniciple amount");
+       pa=obj2.nextDouble();
+       System.out.println("please enter time in years ");
+       tiy=obj2.nextDouble();
+       System.out.println("please enter rate of interest");
+       roi=obj2.nextDouble();
+       simint= (pa*tiy*roi)/100;
+       System.out.println("this is simple rate of interest: "+simint);                                       }
+      catch(Exception e)
+      {
+      System.out.println("if exception occurs");
+     }
+    }
+  }
+   class ana138
+    {
+     public static void main(String args[])
+    {
+     thread24 andrei=new thread24();
+     thread23 ana=new thread23();
+     andrei.setPriority(10);
+     andrei.start(); 
+   ana.setPriority(1);
+     ana.start();
+
+// Change
+ana.join();
+System.out.println(ana.getArea());
+    }
+     }
