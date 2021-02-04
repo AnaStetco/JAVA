@@ -1,0 +1,12 @@
+class countargsmain
+ {
+   public static void main(String args[])
+    {
+     int count,i;
+     count= args.length;
+      for(i=0;i<count;i=i+1)
+       {
+
+        System.out.println(" string  :" +args[i]);
+
+       }
