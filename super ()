@@ -1,0 +1,47 @@
+import java.util.Scanner;
+class dog
+
+  {
+int age,a;
+
+dog(int y,int x)
+  {
+   age=y;
+   a=x;
+  }
+
+   
+void bark()
+{
+System.out.println("WOOF,WOOF");
+System.out.println("this is age of dog: "+age);
+System.out.println("this is a: "+a);
+}
+
+}
+class cat extends dog
+   {
+    cat(int z,int w)
+   {
+    super(z,w);
+
+   }
+} 
+
+class  mymain
+{
+  public static void main(String args[])
+    {
+   // Scanner obj2=new Scanner(System.in);
+   // int a;
+   // a=obj2.nextInt();
+   // dog obj=new dog(5,a);
+    // obj.bark();
+     cat obj3=new cat(2,3);
+      obj3.bark();
+ 
+    }
+}
+
+
+
