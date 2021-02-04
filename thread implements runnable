@@ -1,0 +1,72 @@
+//  java has got one interface with the name Runnable
+// another method of creating a thread is IMPLEMENTIONG 
+import java.lang.Thread;
+import java.lang.Exception;
+class thread1 implements Runnable
+
+{
+ public void run()
+  {
+   int i;
+   try
+    {
+      for(i=1;i<=10;i++)
+       {
+         System.out.println("  i is thread by runnable  I :" +i);
+
+       }
+     }
+     catch(Exception e)
+      {
+
+       System.out.println(" IF SOME EXCEPTION OCCURS ");
+       }
+     }
+}
+class thread2 implements Runnable
+  {
+  public void run()
+{
+int j;
+   try
+    {
+      for(j=1;j<=10;j++)
+       {
+         System.out.println(" thread by runnable j starts " +j);
+
+       }
+     }
+     catch(Exception e)
+      {
+
+       System.out.println(" IF SOME EXCEPTION OCCURS ");
+       }
+}
+ }
+  
+class ana133
+  {
+public static void main(String args[])
+{
+ 
+thread1 obj1=new thread1();// this is the object of the class that is implementing Runnable interface
+Thread tobj = new Thread(obj1);// step2
+
+
+
+thread2 obj2=new thread2();
+Thread ana23=new Thread(obj2);
+
+
+tobj.setPriority(1);// i 
+tobj.start();
+ana23.setPriority(10);
+ana23.start();
+}
+  
+}
+
+//2 step process
+//I)  Create the object of the class that implements Runnable interface
+//II) Create the object of the Thread Class by passing the object created in step 1
+//II) invoke start() function by the object of Thread Class 
