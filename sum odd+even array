@@ -1,0 +1,43 @@
+//write a program that accepts 10 integer val of an array from user
+// find sum of all even nos as well as of odd nos of the array.
+
+import java.util.Scanner;
+public class homework
+{
+public static void main(String args[])
+{
+int i,sum1,sum2;
+sum1=0;
+sum2=0;
+int a[]={0,0,0,0,0,0,0,0,0,0};
+Scanner obj=new Scanner(System.in);
+for(i=0;i<10;i++)
+   {
+System.out.println("enter elements of array");
+a[i]=obj.nextInt();
+   }
+for(i=0;i<10;i++)
+   {
+    
+   if(a[i]%2==0)
+   {
+      sum1=sum1+a[i];
+     System.out.println("this are the even numbers: "+a[i]);
+
+   }
+if(a[i]%2!=0)
+     {
+          sum2=sum2+a[i];
+           System.out.println("this are odd numbers"+a[i]);
+   }
+
+   }
+System.out.println("this are the sum even numbers: "+sum1);
+System.out.println("this are sum odd numbers: "+sum2);
+System.out.println("this is total sum: "+(sum1+sum2));
+}
+
+
+}
+
+  
