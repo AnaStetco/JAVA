@@ -1,0 +1,12 @@
+class area
+{
+  public static void main(String args[])
+   {
+    area rect= new area();
+    double car;
+    rect.getval();
+    car=rect.area();
+   System.out.println("this is the area of rectange: "+car);
+    rect.display();
+   }
+} 
