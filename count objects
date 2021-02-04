@@ -1,0 +1,31 @@
+class count
+ {
+ static int noofobj=0;
+  count()
+   {
+  noofobj=noofobj+1;
+   }
+
+void showcount()
+   {
+System.out.println("this is number of objects: "+noofobj);
+  }
+
+
+
+}
+ class abc
+
+ {
+
+public static void main(String args[])
+{
+count obj1 = new count();
+count obj2 = new count();
+count obj3 = new count();
+obj3.showcount();
+
+  }
+
+
+}
