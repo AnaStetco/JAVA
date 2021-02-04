@@ -1,0 +1,23 @@
+class ana5
+{
+  
+     public static void main(String args[])
+     {
+
+     double c,tf;
+      c=23;   
+     
+     tf= (c*9.0/5.0)+32;
+    
+
+      
+      
+      System.out.println("this is the temperature in faranhait: "+tf);
+      
+
+
+
+     }
+
+
+}
